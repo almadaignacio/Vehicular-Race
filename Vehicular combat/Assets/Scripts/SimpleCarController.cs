@@ -39,7 +39,7 @@ public class SimpleCarController : MonoBehaviour
 
     public void FixedUpdate()
     {
-        float motor = maxMotorTorque * Input.GetAxis("Vertical") * 800 ;
+        float motor = maxMotorTorque * Input.GetAxis("Vertical") * 80000 * Time.deltaTime;
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
 
         foreach (AxleInfo axleInfo in axleInfos)
@@ -51,8 +51,8 @@ public class SimpleCarController : MonoBehaviour
             }
             if (axleInfo.motor)
             {
-                axleInfo.leftWheel.motorTorque = motor;
-                axleInfo.rightWheel.motorTorque = motor;
+                axleInfo.leftWheel.motorTorque = motor * Time.deltaTime;
+                axleInfo.rightWheel.motorTorque = motor * Time.deltaTime;
             }
             ApplyLocalPositionToVisuals(axleInfo.leftWheel);
             ApplyLocalPositionToVisuals(axleInfo.rightWheel);
