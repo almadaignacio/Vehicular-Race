@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Cinemachine;
 
 public class Timer : MonoBehaviour
 {
@@ -35,9 +36,12 @@ public class Timer : MonoBehaviour
                 
                 if (timeRemaining >= 360)
                 {
-                    GameObject.Find("|||||PLAYER||||||").GetComponent<SimpleController>().enabled = enabled;
-                    GameObject.Find("|||||PLAYER||||||").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
-                    GameObject.Find("Car").GetComponent<Opponent>().enabled = false;
+                    GameObject.Find("Aang Car").GetComponent<PrometeoCarController>().enabled = enabled;
+                    GameObject.Find("Aang Car").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
+                    GameObject.Find("Katara Car").GetComponent<Opponent>().enabled = false;
+                    GameObject.Find("Sokka Car").GetComponent<Opponent>().enabled = false;
+                    GameObject.Find("Toph Car").GetComponent<Opponent>().enabled = false;
+                    GameObject.Find("Zuko Car").GetComponent<Opponent>().enabled = false;
                     GameObject.Find("TMP counter").GetComponent<Timer>().enabled = false;
                     GameObject.Find("reloj").GetComponent<Animator>().enabled = false;
                     GameObject.Find("vacio aguja").GetComponent<VisualClockl>().enabled = false;
@@ -49,9 +53,6 @@ public class Timer : MonoBehaviour
 
             }
         }
-
-        
-
     }
     IEnumerator TimeOutRutine()
     {
@@ -62,9 +63,6 @@ public class Timer : MonoBehaviour
         yield return new WaitForSeconds(1f);
         p1.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
-
-
-
     }
 
     void DisplayTime (float timeToDisplay)

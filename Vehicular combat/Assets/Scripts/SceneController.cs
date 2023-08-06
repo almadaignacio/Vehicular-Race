@@ -7,11 +7,12 @@ public class SceneController : MonoBehaviour
 {
     public bool Level;
     public int indexlevel;
+    public GameObject UiForPlaying;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -21,7 +22,6 @@ public class SceneController : MonoBehaviour
         {
             ChangeLevel(indexlevel);
         }
-
     }
 
     public void ChangeLevel(int index)
@@ -32,5 +32,15 @@ public class SceneController : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void StartGame()
+    {
+        UiForPlaying.SetActive(true);
+    }
+
+    public void NoGame()
+    {
+        UiForPlaying.SetActive(false);
     }
 }

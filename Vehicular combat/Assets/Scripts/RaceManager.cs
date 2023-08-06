@@ -97,9 +97,9 @@ public class RaceManager : MonoBehaviour
 
                 Debug.Log("Car " + carNumber + " Has over taken " + carInFront.GetComponent<CarCpManager>().carNumber);
             }
-            
 
-            if(Cars[0].GetComponent<CarCpManager>().carPosition == 1)
+
+            if (Cars[0].GetComponent<CarCpManager>().carPosition == 1)
             {
                 postitionTxt.GetComponent<Text>().color = Color.yellow;
                 postitionTxt.text = Cars[0].GetComponent<CarCpManager>().carPosition + "st";
@@ -115,6 +115,18 @@ public class RaceManager : MonoBehaviour
             {
                 postitionTxt.GetComponent<Text>().color = Color.green;
                 postitionTxt.text = Cars[0].GetComponent<CarCpManager>().carPosition + "rd";
+            }
+
+            if (Cars[0].GetComponent<CarCpManager>().carPosition == 4)
+            {
+                postitionTxt.GetComponent<Text>().color = Color.gray;
+                postitionTxt.text = Cars[0].GetComponent<CarCpManager>().carPosition + "th";
+            }
+
+            if (Cars[0].GetComponent<CarCpManager>().carPosition == 5)
+            {
+                postitionTxt.GetComponent<Text>().color = Color.gray;
+                postitionTxt.text = Cars[0].GetComponent<CarCpManager>().carPosition + "th";
             }
 
         }

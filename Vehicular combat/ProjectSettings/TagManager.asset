@@ -9,6 +9,7 @@ TagManager:
   - CP
   - Car1
   - Speed
+  - Car2
   layers:
   - Default
   - TransparentFX
