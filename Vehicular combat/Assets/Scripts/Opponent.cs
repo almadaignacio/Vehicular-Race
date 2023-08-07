@@ -42,4 +42,11 @@ public class Opponent : MonoBehaviour
         
     }
 
+    IEnumerator Speed()
+    {
+        speed = speed * 1.5f;
+        yield return new WaitForSeconds(8f);
+        speed = speed / 1.5f;
+    }
+
 }

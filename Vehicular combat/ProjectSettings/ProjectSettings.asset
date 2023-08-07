@@ -615,6 +615,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
     Standalone: UNITY_TEMPLATE_KART
+    WebGL: UNITY_TEMPLATE_KART
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

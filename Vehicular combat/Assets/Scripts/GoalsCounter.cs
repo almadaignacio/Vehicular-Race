@@ -24,12 +24,16 @@ public class GoalsCounter : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
 
-            GameObject.Find("Aang Car").GetComponent<PrometeoCarController>().enabled = enabled;
-            GameObject.Find("Aang Car").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
+            GameObject.Find("Aang Car").GetComponent<Opponent>().enabled = false;
+            GameObject.Find("Aang Car").GetComponent<PrometeoCarController>().enabled = false;
             GameObject.Find("Katara Car").GetComponent<Opponent>().enabled = false;
+            GameObject.Find("Katara Car").GetComponent<PrometeoCarController>().enabled = false;
             GameObject.Find("Sokka Car").GetComponent<Opponent>().enabled = false;
+            GameObject.Find("Sokka Car").GetComponent<PrometeoCarController>().enabled = false;
             GameObject.Find("Toph Car").GetComponent<Opponent>().enabled = false;
+            GameObject.Find("Toph Car").GetComponent<PrometeoCarController>().enabled = false;
             GameObject.Find("Zuko Car").GetComponent<Opponent>().enabled = false;
+            GameObject.Find("Zuko Car").GetComponent<PrometeoCarController>().enabled = false;
             GameObject.Find("TMP counter").GetComponent<Timer>().enabled = false;
             GameObject.Find("reloj").GetComponent<Animator>().enabled = false;
             GameObject.Find("vacio aguja").GetComponent<VisualClockl>().enabled = false;
@@ -43,39 +47,7 @@ public class GoalsCounter : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Cursor.lockState = CursorLockMode.None;
-
-            GameObject.Find("Aang Car").GetComponent<PrometeoCarController>().enabled = enabled;
-            GameObject.Find("Aang Car").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
-            GameObject.Find("Katara Car").GetComponent<Opponent>().enabled = false;
-            GameObject.Find("Sokka Car").GetComponent<Opponent>().enabled = false;
-            GameObject.Find("Toph Car").GetComponent<Opponent>().enabled = false;
-            GameObject.Find("Zuko Car").GetComponent<Opponent>().enabled = false;
-            GameObject.Find("TMP counter").GetComponent<Timer>().enabled = false;
-            GameObject.Find("reloj").GetComponent<Animator>().enabled = false;
-            GameObject.Find("vacio aguja").GetComponent<VisualClockl>().enabled = false;
-            GameObject.Find("Image izq").GetComponent<Animator>().enabled = false;
-            GameObject.Find("Image der").GetComponent<Animator>().enabled = false;
-            panel.SetActive(true);
-        }
-
-        if (other.gameObject.CompareTag("Car1"))
-        {
-            Cursor.lockState = CursorLockMode.None;
-
-            GameObject.Find("Aang Car").GetComponent<PrometeoCarController>().enabled = enabled;
-            GameObject.Find("Aang Car").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
-            GameObject.Find("Katara Car").GetComponent<Opponent>().enabled = false;
-            GameObject.Find("Sokka Car").GetComponent<Opponent>().enabled = false;
-            GameObject.Find("Toph Car").GetComponent<Opponent>().enabled = false;
-            GameObject.Find("Zuko Car").GetComponent<Opponent>().enabled = false;
-            GameObject.Find("TMP counter").GetComponent<Timer>().enabled = false;
-            GameObject.Find("reloj").GetComponent<Animator>().enabled = false;
-            GameObject.Find("vacio aguja").GetComponent<VisualClockl>().enabled = false;
-            GameObject.Find("Image izq").GetComponent<Animator>().enabled = false;
-            GameObject.Find("Image der").GetComponent<Animator>().enabled = false;
-            Cursor.lockState = CursorLockMode.None;
+            gameManager.incrementGoal();
         }
     }
-
 }

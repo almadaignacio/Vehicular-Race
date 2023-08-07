@@ -15,11 +15,11 @@ public class CountDown : MonoBehaviour
 
     public GameObject lapTimer;
 
-    public GameObject camAang;
-    public GameObject camKatara;
-    public GameObject camSokka;
-    public GameObject camToph;
-    public GameObject camZuko;
+    public bool camAang;
+    public bool camKatara;
+    public bool camSokka;
+    public bool camToph;
+    public bool camZuko;
 
     // Start is called before the first frame update
     void Start()
@@ -58,17 +58,85 @@ public class CountDown : MonoBehaviour
         readySound.Play();
         Countdown.SetActive(true);
 
-        GameObject.Find("Aang Car").GetComponent<PrometeoCarController>().enabled = true;
-        GameObject.Find("Aang Car").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        GameObject.Find("Katara Car").GetComponent<Opponent>().enabled = true;
-        GameObject.Find("Sokka Car").GetComponent<Opponent>().enabled = true;
-        GameObject.Find("Toph Car").GetComponent<Opponent>().enabled = true;
-        GameObject.Find("Zuko Car").GetComponent<Opponent>().enabled = true;
-        GameObject.Find("TMP counter").GetComponent<Timer>().enabled = true;
-        GameObject.Find("reloj").GetComponent<Animator>().enabled = true;
-        GameObject.Find("vacio aguja").GetComponent<VisualClockl>().enabled = true;
-        GameObject.Find("Image izq").GetComponent<Animator>().enabled = true;
-        GameObject.Find("Image der").GetComponent<Animator>().enabled = true;
-        music.Play();
+        if(camAang == true)
+        {
+            GameObject.Find("Aang Car").GetComponent<PrometeoCarController>().enabled = true;
+            GameObject.Find("Aang Car").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.Find("Katara Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Sokka Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Toph Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Zuko Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("TMP counter").GetComponent<Timer>().enabled = true;
+            GameObject.Find("reloj").GetComponent<Animator>().enabled = true;
+            GameObject.Find("vacio aguja").GetComponent<VisualClockl>().enabled = true;
+            GameObject.Find("Image izq").GetComponent<Animator>().enabled = true;
+            GameObject.Find("Image der").GetComponent<Animator>().enabled = true;
+            music.Play();
+        }
+
+        if (camKatara == true)
+        {
+            GameObject.Find("Katara Car").GetComponent<PrometeoCarController>().enabled = true;
+            GameObject.Find("Katara Car").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.Find("Aang Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Sokka Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Toph Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Zuko Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("TMP counter").GetComponent<Timer>().enabled = true;
+            GameObject.Find("reloj").GetComponent<Animator>().enabled = true;
+            GameObject.Find("vacio aguja").GetComponent<VisualClockl>().enabled = true;
+            GameObject.Find("Image izq").GetComponent<Animator>().enabled = true;
+            GameObject.Find("Image der").GetComponent<Animator>().enabled = true;
+            music.Play();
+        }
+
+        if (camSokka == true)
+        {
+            GameObject.Find("Sokka Car").GetComponent<PrometeoCarController>().enabled = true;
+            GameObject.Find("Sokka Car").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.Find("Katara Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Aang Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Toph Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Zuko Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("TMP counter").GetComponent<Timer>().enabled = true;
+            GameObject.Find("reloj").GetComponent<Animator>().enabled = true;
+            GameObject.Find("vacio aguja").GetComponent<VisualClockl>().enabled = true;
+            GameObject.Find("Image izq").GetComponent<Animator>().enabled = true;
+            GameObject.Find("Image der").GetComponent<Animator>().enabled = true;
+            music.Play();
+        }
+
+        if (camToph == true)
+        {
+            GameObject.Find("Toph Car").GetComponent<PrometeoCarController>().enabled = true;
+            GameObject.Find("Toph Car").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.Find("Katara Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Sokka Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Aang Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Zuko Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("TMP counter").GetComponent<Timer>().enabled = true;
+            GameObject.Find("reloj").GetComponent<Animator>().enabled = true;
+            GameObject.Find("vacio aguja").GetComponent<VisualClockl>().enabled = true;
+            GameObject.Find("Image izq").GetComponent<Animator>().enabled = true;
+            GameObject.Find("Image der").GetComponent<Animator>().enabled = true;
+            music.Play();
+        }
+
+        if (camZuko == true)
+        {
+            GameObject.Find("Zuko Car").GetComponent<PrometeoCarController>().enabled = true;
+            GameObject.Find("Zuko Car").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GameObject.Find("Katara Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Sokka Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Toph Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("Aang Car").GetComponent<Opponent>().enabled = true;
+            GameObject.Find("TMP counter").GetComponent<Timer>().enabled = true;
+            GameObject.Find("reloj").GetComponent<Animator>().enabled = true;
+            GameObject.Find("vacio aguja").GetComponent<VisualClockl>().enabled = true;
+            GameObject.Find("Image izq").GetComponent<Animator>().enabled = true;
+            GameObject.Find("Image der").GetComponent<Animator>().enabled = true;
+            music.Play();
+        }
+
     }
 }
