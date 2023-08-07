@@ -7,7 +7,8 @@ public class Speed : MonoBehaviour
 {
     public GameObject nitro;
     public GameObject speedImage;
-
+    public GameObject Particle;
+    public Transform Player;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class Speed : MonoBehaviour
 
     IEnumerator Speedd()
     {
+        Instantiate(Particle,Player.transform.position,Player.rotation);
         speedImage.SetActive(true);
         nitro.SetActive(true);
         yield return new WaitForSeconds(8f);

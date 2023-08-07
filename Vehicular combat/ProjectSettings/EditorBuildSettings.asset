@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel 1 Katara.unity
     guid: 9e80164e2e67df8428ed5949a90e2cb1
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1 Sokka.unity
+    guid: c2d5ea8dc949ee944b76d70b7e00c0eb
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1 Toph.unity
+    guid: 17317d088e2e70c40b1eef7a0591e40e
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1 Zuko.unity
+    guid: bb290e1d86f88854086fa296ef21e354
   m_configObjects: {}
